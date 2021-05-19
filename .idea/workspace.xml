@@ -21,10 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a75dec54-ccc8-4d20-bb83-8318bbd93772" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +63,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\WUYU\typescriptlearning\src\modules" />
       <recent name="C:\Users\WUYU\typescriptlearning\src" />
     </key>
   </component>
@@ -85,7 +82,7 @@
       <workItem from="1621206326165" duration="10358000" />
       <workItem from="1621222617167" duration="654000" />
       <workItem from="1621404308548" duration="2706000" />
-      <workItem from="1621409723672" duration="7557000" />
+      <workItem from="1621409723672" duration="8811000" />
     </task>
     <servers />
   </component>
