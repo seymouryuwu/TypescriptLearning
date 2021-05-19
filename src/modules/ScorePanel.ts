@@ -21,22 +21,26 @@ class ScorePanel {
         this.scoreForLevelUp = scoreForLevelUp;
     }
 
-    getScore() {
+    addScore() {
         this.score++;
         this.scoreEle.innerHTML = this.score + "";
 
         // every this.scoreForLevelUp level will get up
         if (this.score % this.scoreForLevelUp === 0) {
-            this.getLevelUP();
+            this.levelUP();
         }
     }
 
-    getLevelUP() {
+    levelUP() {
         if (this.level < this.maxLevel) {
             this.level++;
             this.levelEle.innerHTML = this.level + "";
         }
 
+    }
+
+    getLevel() {
+        return this.level;
     }
 }
 

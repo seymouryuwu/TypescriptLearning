@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a75dec54-ccc8-4d20-bb83-8318bbd93772" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ScorePanel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ScorePanel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Users\WUYU\AppData\Roaming\npm\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -82,7 +84,7 @@
       <workItem from="1621206326165" duration="10358000" />
       <workItem from="1621222617167" duration="654000" />
       <workItem from="1621404308548" duration="2706000" />
-      <workItem from="1621409723672" duration="8811000" />
+      <workItem from="1621409723672" duration="12926000" />
     </task>
     <servers />
   </component>
@@ -113,9 +115,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="307" y="118" key="EditFileWatcherDialog/0.0.1280.680@0.0.1280.680" timestamp="1621407062076" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1621407035662">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1621421395622">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1621407035662" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1621421395622" />
   </component>
 </project>
