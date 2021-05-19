@@ -1,3 +1,80 @@
-body {
-  background-color: deepskyblue;
+// attributes
+@background-color: deepskyblue;
+@border-color: midnightblue;
+@snake-color: black;
+@food-color: crimson;
+
+// clear default style
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font: bold 20px "Cambria Math";
+}
+
+// set main window style
+#main {
+  width: 360px;
+  height: 420px;
+  background-color: @background-color;
+  margin: 100px auto;
+  border: 10px solid @border-color;
+  border-radius: 30px;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+
+  // set game stage window style
+  #stage {
+    width: 304px;
+    height: 304px;
+    border: 2px solid @border-color;
+    position: relative;
+
+    // set snake style
+    #snake {
+      &>div {
+        width: 10px;
+        height: 10px;
+        background-color: @snake-color;
+        border: 1px solid @background-color;
+        position: absolute;
+      }
+    }
+
+    // set food style
+    #food {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: space-between;
+
+      &>div {
+        width: 4px;
+        height: 4px;
+        background-color: @food-color;
+        transform: rotate(45deg);
+      }
+
+      left: 40px;
+      top: 100px;
+    }
+  }
+
+  // set score panel style
+  #score-panel {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
