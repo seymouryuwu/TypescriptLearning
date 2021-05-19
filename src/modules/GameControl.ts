@@ -23,18 +23,24 @@ class GameControl {
     init() {
         document.addEventListener("keydown", this.keydownHandler.bind(this));
         document.addEventListener("gameOver", this.gameOverHandler.bind(this));
-        this.snakeMove();
+        this.moveSnake();
     }
 
     keydownHandler(event: KeyboardEvent) {
-        this.direction = event.key;
+        if (event.key === "ArrowUp" ||
+            event.key === "ArrowDown" ||
+            event.key === "ArrowLeft" ||
+            event.key === "ArrowRight") {
+            this.direction = event.key;
+        }
     }
 
     gameOverHandler() {
         this.isAlive = false;
+        alert("Game Over");
     }
 
-    snakeMove() {
+    moveSnake() {
         let x = this.snake.x;
         let y = this.snake.y;
 
@@ -55,17 +61,27 @@ class GameControl {
                 break;
         }
 
-        this.snake.x = x;
-        this.snake.y = y;
+        // check if snake eats apple, if it does, increase body
+        this.checkEat(x, y);
+
+        // move snake
+        this.snake.setCoordinates(x, true);
+        this.snake.setCoordinates(y, false);
 
         // if snake is alive, move again
         if (this.isAlive) {
             // the higher level, the faster snake move
-            setTimeout(this.snakeMove.bind(this), 500 - (this.scorePanel.getLevel() - 1) * 50);
+            setTimeout(this.moveSnake.bind(this), 150 - (this.scorePanel.getLevel() - 1) * 10);
         }
     }
 
-
+    checkEat(x: number, y: number) {
+        if ((x === this.food.x) && (y === this.food.y)) {
+            this.food.changePosition();
+            this.scorePanel.addScore();
+            this.snake.increaseBody();
+        }
+    }
 }
 
 export default GameControl;
