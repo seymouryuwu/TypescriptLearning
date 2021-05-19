@@ -11,7 +11,7 @@ class GameControl {
     private direction: String = "";
 
     // whether game is live
-    private isLive: boolean = true;
+    private isAlive: boolean = true;
 
     constructor() {
         this.snake = new Snake();
@@ -22,12 +22,16 @@ class GameControl {
     // initialize game
     init() {
         document.addEventListener("keydown", this.keydownHandler.bind(this));
+        document.addEventListener("gameOver", this.gameOverHandler.bind(this));
         this.snakeMove();
     }
 
     keydownHandler(event: KeyboardEvent) {
-        //if (event.key ==)
         this.direction = event.key;
+    }
+
+    gameOverHandler() {
+        this.isAlive = false;
     }
 
     snakeMove() {
@@ -54,8 +58,10 @@ class GameControl {
         this.snake.x = x;
         this.snake.y = y;
 
-        if (this.isLive) {
-            setTimeout(this.snakeMove.bind(this), 300 - (this.scorePanel.getLevel() - 1) * 30);
+        // if snake is alive, move again
+        if (this.isAlive) {
+            // the higher level, the faster snake move
+            setTimeout(this.snakeMove.bind(this), 500 - (this.scorePanel.getLevel() - 1) * 50);
         }
     }
 

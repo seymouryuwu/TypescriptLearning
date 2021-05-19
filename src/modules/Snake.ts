@@ -21,11 +21,29 @@ class Snake {
 
     // set snake head coordinates
     set x(value) {
-        this.head.style.left = value + "px";
+        if (this.x === value) {
+            return;
+        }
+
+        if (value < 0 || value > 290) {
+            const event = new CustomEvent("gameOver");
+            document.dispatchEvent(event);
+        } else {
+            this.head.style.left = value + "px";
+        }
     }
 
     set y(value) {
-        this.head.style.top = value + "px";
+        if (this.y === value) {
+            return;
+        }
+
+        if (value < 0 || value > 290) {
+            const event = new CustomEvent("gameOver");
+            document.dispatchEvent(event);
+        } else {
+            this.head.style.top = value + "px";
+        }
     }
 
     // snake increases one unit of body
